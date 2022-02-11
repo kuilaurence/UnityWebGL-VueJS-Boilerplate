@@ -6,7 +6,7 @@
       Look in the src of npm-modules/vue-unity/webgl/ after npm installing for the mechanics of this custom component
       -->
       <unity
-        src="/Build/WebGL-Test.json"
+        src="/Build/Build.json"
         width="1000"
         height="600"
         unityLoader="/Build/UnityLoader.js" ref="myInstance"
@@ -30,6 +30,11 @@ export default {
   components: {
     Unity
   },
+  created(){
+    window.receiveMsgFromUnity=(data)=>{
+      console.log("recive:",JSON.parse(data));
+    }
+  },
   data() {
     return {
       textInput: "String to send"
@@ -38,7 +43,7 @@ export default {
   methods: {
     sendText() {
       console.log(this.textInput)
-      this.$refs.myInstance.message('Text', 'SetText', this.textInput)
+      this.$refs.myInstance.message('Text', 'SetText', this.textInput);
     }
   }
 }
