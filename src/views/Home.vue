@@ -43,7 +43,7 @@ export default {
   methods: {
     sendText() {
       console.log(this.textInput)
-      this.$refs.myInstance.message('Text', 'SetText', this.textInput);
+      this.$refs.myInstance.message('WebGLListener', 'SetText', this.textInput);
     }
   }
 }

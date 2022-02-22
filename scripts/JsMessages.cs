@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 // nethereum
 // https://medium.com/@juanfranblanco/nethereum-2-0-0-rc5-unity3d-integration-eb7664664813
 
-public class GetEth : MonoBehaviour
+public class JsMessages : MonoBehaviour
 {
     [DllImport("__Internal")]
     private static extern string SendTransaction(string data);
@@ -19,6 +19,7 @@ public class GetEth : MonoBehaviour
         gameObject.GetComponent<TextMesh>().text = "PWND";
 
     }
+    //脚本挂载到名为WebGLListener的gameobject上
     public void SetText(string arg)
     {
         gameObject.GetComponent<TextMesh>().text = arg;
