@@ -3,7 +3,7 @@
     <div class="">
       <!--
       The Unity Container.
-      Look in the src of npm-modules/vue-unity/webgl/ after npm installing for the mechanics of this custom component
+      Look in the src of npm-modules/vue-unity-webgl/ after npm installing for the mechanics of this custom component   eg.  Fullscreen
       -->
       <unity
         src="/Build/Build.json"
@@ -14,7 +14,6 @@
       </unity>
     </div>
     <div class="">
-      <!-- Unstyled text input + button -->
       <input v-model="textInput" placeholder="Enter a string to send to Unity">
       <button @click="sendText">
         Send a string to Unity
@@ -31,8 +30,8 @@ export default {
     Unity
   },
   created(){
-    window.receiveMsgFromUnity=(data)=>{
-      console.log("recive:",JSON.parse(data));
+    window["UnityListener"]=(data)=>{
+      console.log("UnityListener:",JSON.parse(data));
     }
   },
   data() {
