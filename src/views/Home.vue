@@ -3,7 +3,7 @@
     <div class="">
       <!--
       The Unity Container.
-      Look in the src of npm-modules/vue-unity-webgl/ after npm installing for the mechanics of this custom component   eg.  Fullscreen
+      Look in the src of npm-modules/vue-unity-webgl/ after npm installing for the mechanics of this custom component |  eg.  Fullscreen
       -->
       <unity
         src="/Build/Build.json"
